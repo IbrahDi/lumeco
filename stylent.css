@@ -210,22 +210,29 @@ header h1 {
     display: none; /* Cache la sous-liste par défaut */
     list-style-type: none; /* Supprime les puces */
     padding-left: 20px; /* Décalage vers la droite */
+    background-color: #2c3e50; /* Couleur de fond plus claire que le menu principal */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre subtile pour donner un effet flottant */
+    margin-top: 5px; /* Séparation du sous-menu avec l'élément parent */
+    position: absolute; /* Positionnement absolu pour qu'il s'affiche sous l'élément parent */
+    left: 100%; /* Le sous-menu se positionne juste à côté du parent (à droite) */
+    top: 0; /* Aligne le sous-menu avec l'élément parent */
 }
 
 /* Affichage du sous-menu lorsque le menu principal est survolé */
 .sidebar ul li:hover .sub-menu {
-    display: block; /* Affiche la sous-liste au survol de l'élément parent */
+    display: block; /* Affiche le sous-menu au survol de l'élément parent */
 }
 
 /* Styles pour les éléments de sous-liste */
 .sub-menu li {
-    padding: 10px 0; /* Espacement autour des sous-items */
+    padding: 10px 20px; /* Espacement autour des sous-items */
 }
 
 /* Style des liens dans le sous-menu */
 .sub-menu li a {
     font-size: 16px; /* Taille du texte des sous-items */
-    color: #ddd; /* Couleur du texte des sous-items */
+    color: #ecf0f1; /* Couleur du texte claire pour un bon contraste */
     text-decoration: none; /* Supprime le soulignement */
     transition: 0.3s; /* Transition douce lors du survol */
 }
@@ -233,7 +240,7 @@ header h1 {
 /* Changement de fond et de décalage lors du survol des sous-menus */
 .sub-menu li a:hover {
     background-color: #1abc9c; /* Couleur de fond au survol */
-    padding-left: 25px; /* Décalage du texte */
+    padding-left: 25px; /* Décalage du texte à gauche lors du survol */
 }
 
 
@@ -274,6 +281,59 @@ section a{
 section strong {
     font-weight: bold; /* Applique un texte en gras */
     
+}
+
+/* Style de la liste */
+.list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style des éléments de la liste */
+.list ul li {
+  width: 33.33%; /* 3 éléments par ligne sur les grands écrans */
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center; /* Centre les liens */
+}
+
+/* Style des liens */
+.list ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 15px;
+  display: block;
+  border-radius: 5px;
+  background-color: #f2f2f2; /* Fond gris professionnel */
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour effet creux */
+}
+
+/* Changement de couleur au survol */
+.list ul li a:hover {
+    
+  background-color: rgb(181,233,238); /* Bleu ciel au survol */
+  color: white;
+  box-shadow: 0 6px 12px rgba(135, 206, 235, 0.4); /* Ombre autour pour effet bombé */
+  transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+/* Changement de couleur au focus */
+.list ul li a:focus {
+  outline: none;
+  border: 2px solid #87CEEB;
+}
+
+/* Espacement supplémentaire pour les éléments */
+.list {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Couleurs de section */
@@ -479,6 +539,16 @@ footer p {
     .bcard{
         scroll-snap-align: center; /* pour centrer les éléments */
     }
+
+    .list {
+    flex-wrap: wrap; /* Permet de revenir à un mode wrap pour l'affichage en deux colonnes */
+    justify-content: space-between;
+  }
+
+  .list-col {
+    width: 48%; /* Chaque liste occupe 48% de la largeur pour 2 colonnes */
+    margin-bottom: 20px; /* Espacement entre les deux listes */
+  }
 
     .scroll-button {
         width: 60px;
