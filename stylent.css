@@ -205,6 +205,37 @@ header h1 {
     padding-left: 25px; /* Décalage du texte vers la droite au survol */
 }
 
+/* Styles pour la sous-liste (sous-menu) */
+.sub-menu {
+    display: none; /* Cache la sous-liste par défaut */
+    list-style-type: none; /* Supprime les puces */
+    padding-left: 20px; /* Décalage vers la droite */
+}
+
+/* Affichage du sous-menu lorsque le menu principal est survolé */
+.sidebar ul li:hover .sub-menu {
+    display: block; /* Affiche la sous-liste au survol de l'élément parent */
+}
+
+/* Styles pour les éléments de sous-liste */
+.sub-menu li {
+    padding: 10px 0; /* Espacement autour des sous-items */
+}
+
+/* Style des liens dans le sous-menu */
+.sub-menu li a {
+    font-size: 16px; /* Taille du texte des sous-items */
+    color: #ddd; /* Couleur du texte des sous-items */
+    text-decoration: none; /* Supprime le soulignement */
+    transition: 0.3s; /* Transition douce lors du survol */
+}
+
+/* Changement de fond et de décalage lors du survol des sous-menus */
+.sub-menu li a:hover {
+    background-color: #1abc9c; /* Couleur de fond au survol */
+    padding-left: 25px; /* Décalage du texte */
+}
+
 
 /* Sections */
 section {
@@ -222,8 +253,14 @@ section h2 {
     margin-bottom: 20px; /* Ajoute un espace en bas des sous-titres */
     color: #003366; /* Couleur du texte en bleu foncé */
 }
+section h3{
+    margin: 3px;
+    text-align: center;
+    font-family: 'Sobatyan-Regular','Roboto-Regular',Arial, sans-serif; /* Police de caractères par défaut */
+}
 
 section p {
+    text-align: justify;
     font-size: 1.1em; /* Taille de police des paragraphes */
     max-width: 900px; /* Limite la largeur des paragraphes à 900px */
     margin: 0 auto; /* Centre les paragraphes */
@@ -293,29 +330,7 @@ footer p {
     margin: 10px 0; /* Ajoute un espacement vertical autour des paragraphes du pied de page */
 }
 
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2em; /* Réduit la taille du titre de l'en-tête sur les écrans plus petits */
-    }
 
-    nav ul li {
-        display: block; /* Affiche les éléments de la navigation en bloc sur les petits écrans */
-        margin: 10px 0; /* Ajoute de l'espace entre les éléments de la navigation */
-    }
-
-    section {
-        padding: 30px 15px; /* Réduit le padding des sections sur les petits écrans */
-    }
-
-    section h2 {
-        font-size: 1.8em; /* Réduit la taille des sous-titres sur les petits écrans */
-    }
-
-    section p {
-        font-size: 1em; /* Réduit la taille de la police des paragraphes sur les petits écrans */
-    }
-}
 
 .ccontainer{
     display: flex;
@@ -339,6 +354,10 @@ footer p {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
     flex: 0 0 auto; /* pour éviter que les éléments ne soient compressés */
+}
+.ccard p{
+    text-align: center;
+    margin: 2px;
 }
 .product-image {
     width: 100%; /* Définit la largeur de l'image pour qu'elle occupe toute la largeur de la carte */
@@ -438,3 +457,132 @@ footer p {
     background-color: #3e8e41;
 }
 
+@media all and (max-width: 1024px) {
+      header h1 {
+        font-size: 40px; /* Ajuste la taille du texte pour les tablettes et petits écrans */
+    }
+
+    nav ul li {
+        display: block; /* Affiche les éléments de la navigation en bloc sur les petits écrans */
+        margin: 10px 0; /* Ajoute de l'espace entre les éléments de la navigation */
+    }
+
+    .card {
+        width: 80%; /* Les cartes prennent plus de place sur les tablettes */
+    }
+    
+    .bouton {
+        padding: 5px 10px; /* Réduit la taille du bouton */
+        font-size: 14px; /* Réduit la taille du texte */
+    }
+
+    .bcard{
+        scroll-snap-align: center; /* pour centrer les éléments */
+    }
+
+    .scroll-button {
+        width: 60px;
+        height: 60px;
+        font-size: 30px; /* Ajuste la taille des boutons de défilement pour les tablettes */
+    }
+
+    footer {
+        font-size: 14px; /* Ajuste légèrement la taille du texte du pied de page */
+    }
+    /*Reduire la taille des boutrons en savoir plus*/
+    .c2 a{font-size: 15px; /* Taille des icônes */}
+.c1 a{font-size: 15px; /* Taille des icônes */}
+    .c11, .c21 {
+        display: none;
+    }
+}
+
+
+
+/* Conteneur des boutons */
+.social-buttons-container {
+    display: flex;
+    gap: 16px;  /* Espacement entre les boutons */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style général pour chaque bouton social */
+.social-btn {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    width: 40px;  /* Taille des boutons */
+    height: 40px; /* Taille des boutons */
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+/* Styles spécifiques pour chaque plateforme */
+.whatsapp-button {
+    background-color: #25d366;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+}
+
+.facebook-button {
+    background-color: #1877f2;
+}
+
+.facebook-button:hover {
+    background-color: #155db8;
+    transform: scale(1.1);
+}
+
+.twitter-button {
+    background-color: #ffffff;
+}
+
+.twitter-button:hover {
+    background-color: #0d8ecf;
+    transform: scale(1.1);
+}
+
+.instagram-button {
+    background-color: #e4405f;
+}
+
+.instagram-button:hover {
+    background-color: #d73450;
+    transform: scale(1.1);
+}
+
+.tiktok-button {
+    background-color: #ffffff;
+}
+
+.tiktok-button:hover {
+    background-color: #1f1f1f;
+    transform: scale(1.1);
+}
+
+/* Style des images dans les boutons */
+.social-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Snapchat */
+.snapchat-button {
+    background-color: #fffc00;
+}
+
+.snapchat-button:hover {
+    background-color: #f0e100;
+    transform: scale(1.1);
+}
