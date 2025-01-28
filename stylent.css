@@ -295,9 +295,15 @@ section strong {
 /* Style des éléments de la liste */
 .list ul li {
   width: 33.33%; /* 3 éléments par ligne sur les grands écrans */
+  height: 20%; /*Hauteur de carte fixe a 20%*/
   padding: 5px;
   box-sizing: border-box;
   text-align: center; /* Centre les liens */
+  cursor: pointer; /* Change le curseur pour indiquer un élément cliquable */
+    word-wrap: break-word; /* Gère les longs textes */
+    word-break: break-word; /* Coupe les mots si nécessaire */
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /* Style des liens */
@@ -402,7 +408,6 @@ border-radius: 10px;
 }
 
 .phtaffi {
-    margin: 2px;
   width:250px;
   height: 250px;
  
@@ -600,6 +605,11 @@ footer p {
         margin: 10px 0; /* Ajoute de l'espace entre les éléments de la navigation */
     }
 
+    .ccard p {
+        font-size: 16px; /* Ajuste la taille du texte pour mobile */
+        margin: 0;
+    }
+
     .card {
         width: 80%; /* Les cartes prennent plus de place sur les tablettes */
     }
@@ -622,8 +632,10 @@ footer p {
 
   .list ul li {
   width: 45%; /* 3 éléments par ligne sur les grands écrans */
+  height: 20%; /*Hauteur de carte fixe a 20%*/
   flex-wrap: wrap; /* Permet de revenir à un mode wrap pour l'affichage en deux colonnes */
     margin: 1px; /* Espace autour de chaque carte */
+        margin: 2px 0; /* Espacement ajusté entre les cartes */
 }
 
 .list ul li a {
