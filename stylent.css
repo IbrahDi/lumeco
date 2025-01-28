@@ -336,6 +336,78 @@ section strong {
   margin: 0 auto;
 }
 
+.caroull {
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+  width: 250px;
+  height: 250px;
+border-radius: 10px;
+}
+
+
+.ecard {
+    
+  width: 100%;
+  height: 100%;
+  animation-duration: 20s;
+  animation-name: mescar;
+  animation-iteration-count: infinite ;
+   animation-timing-function: ease-in-out;
+}
+@keyframes mescar {
+    0%,
+    5% {
+        transform: translateX(0);
+    }
+    10%,
+    15% {
+        transform: translateX(-250px);
+    }
+    20%,
+    25% {
+        transform: translateX(-500px);
+    }
+    30%,
+    35%{
+        transform: translateX(-750px);
+    }
+    40%,
+    45% {
+        transform: translateX(-1000px);
+    }
+    50%,
+    55% {
+        transform: translateX(-1250px);
+    }
+    60%,
+    65% {
+        transform: translateX(-1500px);
+    }
+    70%,
+    75% {
+        transform: translateX(-1750px);
+    }
+    80%,
+    85% {
+        transform: translateX(-2000px);
+    }
+    90%,
+    95% {
+        transform: translateX(-2250px);
+    }
+    100% {
+        transform: translateX(-2500px);
+    }
+}
+
+.phtaffi {
+    margin: 2px;
+  width:250px;
+  height: 250px;
+ 
+}
+
 /* Couleurs de section */
 #accueil {
     background-color: #e6f7ff; /* Couleur de fond bleue claire pour la section Accueil */
@@ -360,6 +432,7 @@ section strong {
 #aide {
     background-color: #f0f8ff; /* Couleur de fond bleu très clair pour la section Aide */
 }
+
 
 /* Boutons */
 button {
@@ -541,12 +614,25 @@ footer p {
     }
 
     .list {
+        width: 45%; /* Chaque carte prend environ 30% de la largeur */
     flex-wrap: wrap; /* Permet de revenir à un mode wrap pour l'affichage en deux colonnes */
-    justify-content: space-between;
+    margin: 1px; /* Espace autour de chaque carte */
+        margin: 2px 0; /* Espacement ajusté entre les cartes */
   }
 
+  .list ul li {
+  width: 45%; /* 3 éléments par ligne sur les grands écrans */
+  flex-wrap: wrap; /* Permet de revenir à un mode wrap pour l'affichage en deux colonnes */
+    margin: 1px; /* Espace autour de chaque carte */
+}
+
+.list ul li a {
+    font-size: 60%;
+    flex-wrap: nowrap;
+}
+
   .list-col {
-    width: 48%; /* Chaque liste occupe 48% de la largeur pour 2 colonnes */
+    width: 45%; /* Chaque carte prend environ 30% de la largeur */
     margin-bottom: 20px; /* Espacement entre les deux listes */
   }
 
