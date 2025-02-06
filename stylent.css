@@ -503,6 +503,15 @@ footer p {
     border-bottom: 1px solid #ddd; /* Ajoute une bordure en bas de l'image pour la séparer visuellement du reste du contenu */
     margin-bottom: 15px; /* Ajoute un espace en dessous de l'image pour séparer l'image du texte en dessous */
 }
+
+.pprix {
+    font-weight: bold;
+    color: rgb(0, 128, 255);
+}
+.p1prix {
+    font-size: 12px;
+    color: gray;
+}
 .bouton{
     text-decoration: none; /* Supprime le soulignement du lien */
     border-radius: 5px; /* Arrondit les coins du bouton */
@@ -518,6 +527,7 @@ footer p {
 .bouton:hover {
     background-color: #3e8e41;
 }
+
 
 .btn, .btn1, .btn2, .btn3, .btn4, .btn5, .btn6 {
     display: inline-block; /* Assure que le lien ait un comportement de bouton */
@@ -607,7 +617,7 @@ footer p {
 
     .ccard p {
         font-size: 16px; /* Ajuste la taille du texte pour mobile */
-        margin: 0;
+        margin: 1px;
     }
 
     .card {
