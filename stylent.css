@@ -764,3 +764,23 @@ footer p {
     background-color: #f0e100;
     transform: scale(1.1);
 }
+
+.stat{
+            display: inline-block; /* Assure que le lien ait un comportement de bouton */
+    padding: 2px 2px; /* Ajoute du remplissage pour donner l'apparence d'un bouton */
+    font-size: 14px; /* Taille du texte pour les boutons PDF */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    border: none; /* Supprime les bordures */
+    cursor: pointer; /* Change le curseur pour indiquer un élément cliquable */
+    word-wrap: break-word; /* Gère les longs textes */
+    word-break: break-word; /* Coupe les mots si nécessaire */
+    font-family: 'Roboto-Bold','Roboto-Regular', Arial, sans-serif; /* Police utilisée */;
+     color: black;
+    background-color: rgb(234,234,234);
+        }
+
+.stat:hover {
+    color: white;
+    background-color: black;
+}
